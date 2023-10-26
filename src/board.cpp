@@ -14,12 +14,18 @@ char playerToChar(Player p) {
 
 TicTacToeBoard::TicTacToeBoard()
 {
-    // TODO
+    for(int i = 0; i < 3; ++i){
+        for(int j = 0; j < 3; ++j)
+        array[i][j] = 0;
+    }
+
 }
+
+
 
 void TicTacToeBoard::print() const
 {
-    // TODO
+    
 }
 
 bool TicTacToeBoard::isValidMove(int move) const
@@ -30,12 +36,19 @@ bool TicTacToeBoard::isValidMove(int move) const
 
 void TicTacToeBoard::move(Player player, int move)
 {
-    // TODO
+    char m = playerToChar(player);
+
+    int row = move/3;
+    int col = move-(row-1)*3;
+
+   array[col][row] = player;
+
+
 }
 
 bool TicTacToeBoard::isGameOver() const
 {
-    // TODO
+    
     return false;
 }
 
