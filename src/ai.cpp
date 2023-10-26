@@ -14,6 +14,5 @@ TicTacToeAI::TicTacToeAI(Player aiPlayer, Player opponent)
 
 int TicTacToeAI::getBestMove(const TicTacToeBoard& board) const
 {
-    // TODO
-    return 0;
+    return minimax(board, true).move;
 }

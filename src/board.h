@@ -1,5 +1,5 @@
 #pragma once
-
+using namespace std;
 #include <array>
 
 // An enum for representing a tic-tac-toe player or a space
@@ -11,6 +11,10 @@ char playerToChar(Player p);
 
 // Simulates a tic-tac-toe board game.
 class TicTacToeBoard {
+
+private:
+
+int array [3][3];
 
 public:
 
@@ -43,4 +47,10 @@ public:
 
     class InvalidMove {};
     class InvalidPlayer {};
+
+    private:
+
+    static const int ROWS = 3;
+    static const int COLUMNS = 3;
+    std::array<Player,SPACES> board;
 };
