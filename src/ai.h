@@ -2,6 +2,7 @@
 
 #include "board.h"
 
+
 // An artificial intelligence for playing tic-tac-toe.
 class TicTacToeAI {
 
@@ -20,4 +21,11 @@ private:
 
     Player aiPlayer;
     Player opponent;
+
+    struct Node {
+        int score;
+        int move;
+    };
+
+    Node minimax(const TicTacToeBoard& board, bool maximize) const;
 };
